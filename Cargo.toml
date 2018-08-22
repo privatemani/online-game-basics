@@ -1,0 +1,11 @@
+[package]
+name = "Egypt"
+version = "0.1.0"
+authors = ["mani"]
+
+[profile.dev]
+opt-level = 3
+
+[dependencies]
+ggez = "0.4"
+rand = "0.5"
