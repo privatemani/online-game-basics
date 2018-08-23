@@ -1,6 +1,7 @@
 extern crate ggez;
 use ggez::event::{self, Keycode, Mod};
 use ggez::*;
+mod client;
 
 // Holy fucking shit I just wrote this and I don't know what it does
 //TODO Make variable names not awful
@@ -302,6 +303,7 @@ impl event::EventHandler for MainState {
         self.movement(_ctx).unwrap();
         println!("Player x {}", self.pos_x);
         println!("Player y {}", self.pos_y);
+        client::client(self.pos_x as i32, self.pos_y as i32);
         //println!("pos_x {}, pos_y {}", self.pos_x, self.pos_y);
         Ok(())
     }
